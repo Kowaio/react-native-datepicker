@@ -91,11 +91,7 @@ class DatePicker extends Component {
   }
 
   onPressMask() {
-    if (typeof this.props.onPressMask === 'function') {
-      this.props.onPressMask();
-    } else {
-      this.onPressCancel();
-    }
+    this.onPressCancel();
   }
 
   onPressCancel() {
@@ -380,7 +376,7 @@ class DatePicker extends Component {
               <TouchableComponent
                 style={Style.datePickerMask}
                 activeOpacity={1}
-                underlayColor={'#00000077'}
+                underlayColor={'transparent'}
                 onPress={this.onPressMask}
               >
                 <TouchableComponent
